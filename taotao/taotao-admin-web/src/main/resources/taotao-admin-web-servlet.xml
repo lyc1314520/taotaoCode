@@ -31,9 +31,17 @@
   	
   	<!-- 配置视图与控制器 -->
   	<mvc:view-controller path="/" view-name="index"/>
-  	
-  	
-  	<!-- ############ 配置dubbo(消费端)############# -->
+
+	<!-- 配置文件上传解析器 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设置文件上传编码 -->
+		<property name="defaultEncoding" value="utf-8"/>
+		<!-- 设置文件上传大小 2MB -->
+		<property name="maxUploadSize" value="2097152"/>
+	</bean>
+
+
+	<!-- ############ 配置dubbo(消费端)############# -->
   	<!-- 配置当前应用的名称 -->
   	<dubbo:application name="taotao-admin-web"/>
   	
