@@ -10,4 +10,5 @@ import com.taotao.admin.pojo.ItemDesc;
  * @Modified By:
  */
 public interface ItemDescService extends BaseService<ItemDesc> {
+
 }

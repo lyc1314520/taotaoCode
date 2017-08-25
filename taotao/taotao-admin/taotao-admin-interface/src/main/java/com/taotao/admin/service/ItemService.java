@@ -18,4 +18,6 @@ public interface ItemService extends BaseService<Item> {
 
     void updateItem(Item item, String desc);
 
+    com.taotao.common.vo.DataGridResult selectItemByPage(Item item, Integer page, Integer rows);
+
 }
