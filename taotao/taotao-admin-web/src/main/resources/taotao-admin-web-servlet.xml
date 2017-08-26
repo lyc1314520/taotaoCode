@@ -56,5 +56,8 @@
 					 id="itemService" timeout="60000"/>
 	<dubbo:reference interface="com.taotao.admin.service.ItemDescService"
 					 id="itemDescService" timeout="60000"/>
-
+	<dubbo:reference interface="com.taotao.admin.service.ContentService"
+					id="contentService" timeout="60000"/>
+	<dubbo:reference interface="com.taotao.admin.service.ContentCategoryService"
+					 id="contentCategoryService" timeout="60000"/>
 </beans>
