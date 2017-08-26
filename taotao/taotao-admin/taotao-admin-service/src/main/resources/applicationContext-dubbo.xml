@@ -30,5 +30,10 @@
                    ref="itemServiceImpl"/>
     <dubbo:service interface="com.taotao.admin.service.ItemDescService"
                    ref="itemDescServiceImpl"/>
+    <dubbo:service interface="com.taotao.admin.service.ContentService"
+                   ref="contentServiceImpl"/>
+    <dubbo:service interface="com.taotao.admin.service.ContentCategoryService"
+                   ref="contentCategoryServiceImpl"/>
+
 
 </beans>

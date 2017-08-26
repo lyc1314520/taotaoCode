@@ -72,6 +72,7 @@ public class BaseServiceImpl<T> implements BaseService<T> {
     public List<T> findAll() {
         return mapper.selectAll();
     }
+
     /**等于号条件查询*/
     @Override
     public List<T> findAllByWhere(T entity) {
@@ -82,6 +83,7 @@ public class BaseServiceImpl<T> implements BaseService<T> {
     public int countByWhere(T entity) {
         return mapper.selectCount(entity);
     }
+
     /**分页查询*/
     @Override
     public List<T> findByPage(Integer pageNum, Integer pageSize) {
