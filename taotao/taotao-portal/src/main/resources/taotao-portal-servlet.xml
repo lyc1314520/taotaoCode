@@ -23,10 +23,15 @@
     <!-- 配置静态资源用WEB容器默认的servlet来处理 -->
     <mvc:default-servlet-handler/>
 
-    <!-- ############## dubbo分布式配置(客户端) ############ -->
-    <!-- 当前应用信息配置(应用名称) -->
-    <dubbo:application name="taotao-protal"/>
-    <!-- zookeeper注册中心 -->
-    <dubbo:registry protocol="zookeeper" address="192.168.12.128:2181"/>
+    <!-- ############ 配置dubbo(消费端)############# -->
+    <!-- 配置当前应用的名称 -->
+    <dubbo:application name="taotao-portal"/>
+
+    <!-- 配置注册中心，使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://192.168.12.128:2181" />
+
+    <!-- 配置引用服务，产生接口的代理对象，像本地bean一样使用 -->
+    <dubbo:reference interface="com.taotao.admin.service.ContentService"
+                     id="contentService" timeout="60000"/>
 
 </beans>
