@@ -14,4 +14,6 @@ public interface ContentService extends BaseService<Content> {
 
     DataGridResult selectContentByPage(Long categoryId, Integer page, Integer rows);
 
+    String findBigAdData();
+
 }
