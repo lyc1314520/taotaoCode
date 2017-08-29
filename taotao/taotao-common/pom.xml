@@ -8,4 +8,13 @@
   <groupId>com.taotao</groupId>
   <artifactId>taotao-common</artifactId>
   <version>1.0.0-SNAPSHOT</version>
+  <dependencies>
+    <!-- jedis -->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+    </dependency>
+  </dependencies>
+
+
 </project>
